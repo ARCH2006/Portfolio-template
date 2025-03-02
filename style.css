@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&family=Poppins:ital,wght@0,200;0,300;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    --max-width:1200px;
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b);  */
+}
+.navbar{
+    max-width: var(--max-width);
+    margin: auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 85px;
+}
+.logo{
+    width: 200px;
+    margin: 20px;   
+}
+.logo h3{
+    font-size: 20px;
+    padding-top:10px ;
+    color: rgb(49, 12, 83);
+}
+.navbar .checkbox,.navbar input{
+    display: none;
+}
+ul{
+    margin-right: 60px; 
+    display:flex;
+    justify-content: flex-start;
+
+}
+ul li {
+    list-style-type: none;
+    margin-left: 70px; 
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(49, 12, 83);
+    font-weight: bold;
+}
+ul li a:hover{
+    border-bottom:solid 2px black;
+    border-top: solid 2px black;
+}
+.section{
+    position: relative; 
+}
+.image-container img{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    opacity: 0.8;
+}
+button{
+    height: 50px; width: 250px; background-color: rgb(84, 84, 197);border-color: rgb(84, 84, 197); color: black;
+    margin-top: 10px;
+    display: block;
+}
+.content{
+    position: absolute;
+    top: 20px;
+    left:200px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (width < 810px) {
+    .navbar .checkbox{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: gray;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .navbar #check:checked ~ ul{
+        z-index: 99;
+        left:0;
+
+    }
+    ul li a{
+
+        font-size: 1.25rem;
+    }  
+}
+.about-me-head, .skills-head{
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    height: auto;
+}
+.about-content, .education{
+    padding-top: 50px;
+    max-width: var(--max-width);
+    margin: auto; 
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    align-items: flex-start;
+}
+.about-content .about-me, .timeline-item,.contacts-det,.contact-me{
+    margin-left: 40px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.contacts{
+    margin-right: 20px; 
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content:flex-start;
+} 
+.contacts li,.social li,.contacts-det li{
+    list-style-type: none;
+}
+.myimage{   
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.myimage .social{
+    width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.social li{
+    font-size: 50px;
+    margin: 10px;
+}
+.section-3{
+    margin-top:50px;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.row1,.skill{
+    margin: 30px;
+
+}
+.hrline{
+    border-bottom: solid 2px gray ;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+.form-ele{
+    width: 450px;
+    height: 400px;
+    box-sizing: border-box;
+}
+.form-group{
+    display: block;
+    margin-top: 30px;
+    margin-bottom:10px;
+}
+.contact-info{
+    height: 100vh;
+    padding-left: 50px;
+    max-width: var(--max-width);
+    margin: auto; 
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    align-items: flex-start;
+}
+.form-group input{
+    background-color: gainsboro;
+    width:500px;
+    height: 50px;    
+}
+
+
+
+
+
+
+
+    
